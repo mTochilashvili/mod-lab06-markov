@@ -1,5 +1,6 @@
 // Copyright 2022 UNN-IASR
 #include <time.h>
+#include <string>
 #include "textgen.h"
 
 Markov::Markov(vector<string> words, int prfx_count, int gen_count) {
