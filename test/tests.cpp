@@ -47,12 +47,3 @@ TEST(task4, test1) {
         ASSERT_STREQ("Enjoy the moment ", output.c_str());
 }
 
-TEST(task5, test1) {
-    vector<string> words{"If", "you", "want", "to", "be", "somebody,", "somebody", "really", "special,", "be", "yourself."};
-    Markov Gen(words, 2, 100);
-    string output = Gen.TextGen();
-    if (output[output.length() - 2] == '.')
-        ASSERT_EQ('.', output[output.length() - 2]);
-    else
-        ASSERT_LE(100, output.size());
-}
