@@ -1,9 +1,15 @@
 // Copyright 2022 UNN-IASR
-INCLUDE_TEXTGEN_H_
 #include <deque>
 #include <map>
 #include <string>
 #include <vector>
+
+#ifndef INCLUDE_TEXTGEN_H_
+#define INCLUDE_TEXTGEN_H_
+
+// my header
+
+#endif  // INCLUDE_TEXTGEN_H_
 
 class Markov {
  private:
