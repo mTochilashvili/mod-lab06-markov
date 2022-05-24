@@ -1,6 +1,7 @@
 // Copyright 2022 UNN-IASR
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "textgen.h"
 
 
