@@ -26,7 +26,7 @@ Markov::Markov(map<prefix, vector<string>> Gen, int gen_count) {
 
 string Markov::TextGen() {
     srand(time(NULL));
-    string output;
+    std::string output;
     deque<string> words;
 
     auto it = statelab.begin();
