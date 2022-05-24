@@ -1,7 +1,9 @@
 // Copyright 2022 UNN-IASR
-#include "textgen.h"
-#include <fstream>
 #include <iostream>
+#include <fstream>
+#include "textgen.h"
+
+
 
 int main() {
     ifstream fin;
