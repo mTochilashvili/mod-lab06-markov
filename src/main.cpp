@@ -14,7 +14,7 @@ int main() {
         exit(0);
     }
     vector<string> words;
-    string word;
+    std::string word;
     while (!fin.eof()) {
         fin >> word;
         words.push_back(word);
@@ -22,7 +22,7 @@ int main() {
     fin.close();
 
     Markov Gen(words, 2, 1000);
-    string line = Gen.TextGen();
+    std::string line = Gen.TextGen();
 
     ofstream fout;
     fout.open("output.txt");
