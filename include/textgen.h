@@ -1,4 +1,6 @@
 // Copyright 2022 UNN-IASR
+INCLUDE_TEXTGEN_H_
+#include <deque>
 #include <map>
 #include <string>
 #include <vector>
