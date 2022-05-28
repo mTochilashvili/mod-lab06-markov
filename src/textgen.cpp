@@ -3,6 +3,15 @@
 #include <string>
 #include "textgen.h"
 
+
+std::default_random_engine& my_engine() {
+    static std::default_random_engine e{};
+    return e;
+}
+
+
+int randm() { return my_engine()() - my_engine().min(); }
+
 Markov::Markov(std::vector<std::string> words, int prfx_count, int gen_count) {
     NPREF = prfx_count;
     MAXGEN = gen_count;
@@ -38,7 +47,7 @@ std::string Markov::TextGen() {
         prefix prfx;
         for (int i = 0; i < NPREF; i++)
             prfx.push_back(words.at(i));
-        int random = rand() % statelab.find(prfx)->second.size();
+        int random = randm() % statelab.find(prfx)->second.size();
         if (statelab.find(prfx)->second.at(random) == "<Last_Prefix>") {
             for (int i = 0; i < NPREF; i++)
                 output += words.at(i) + ' ';
