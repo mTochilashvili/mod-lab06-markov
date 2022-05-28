@@ -7,13 +7,13 @@
 
 
 int main() {
-    ifstream fin;
+    std::ifstream fin;
     fin.open("text.txt");
     if (!fin.is_open()) {
-        cout << "Ошибка при открытии исходного файла!";
+        std::cout << "Ошибка при открытии исходного файла!";
         exit(0);
     }
-    vector<string> words;
+    std::vector<std::string> words;
     std::string word;
     while (!fin.eof()) {
         fin >> word;
@@ -24,10 +24,10 @@ int main() {
     Markov Gen(words, 2, 1000);
     std::string line = Gen.TextGen();
 
-    ofstream fout;
+    std::ofstream fout;
     fout.open("output.txt");
     if (!fout.is_open()) {
-        cout << "Ошибка при открытии выходного файла.";
+        std::cout << "Ошибка при открытии выходного файла.";
         exit(0);
     }
     fout.clear();
