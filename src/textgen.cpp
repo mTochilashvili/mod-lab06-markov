@@ -1,6 +1,7 @@
 // Copyright 2022 UNN-IASR
 #include <time.h>
 #include <string>
+#include <random>
 #include "textgen.h"
 
 
